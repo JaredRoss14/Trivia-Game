@@ -20,6 +20,7 @@ function renderQuestion(){
 	if(position >= triviaQuestions.length){
 		test.innerHTML = "<h2> You got " + correct + " of " + triviaQuestions.length + " riddles correct </h2>";
 		_("test_status").innerHTML = "Test Completed";
+	$("#time").hide;
 		return false;
 	};
 	_("test_status").innerHTML = "Question " + (position + 1) + " of " + triviaQuestions.length;
@@ -34,9 +35,9 @@ function renderQuestion(){
 	test.innerHTML += "<input type='radio' name='choices' value='C'> " + chC + "<br>";
 	test.innerHTML += "<input type='radio' name='choices' value='D'> " + chD + "<br><br>";
 	test.innerHTML += "<button onclick='checkAnswer()'>Submit Answer</button>";
-	var secondsRemaining = 10,
-      display = $('#time');
-  startTimer(secondsRemaining, display);
+	// var secondsRemaining = 10,
+ //      display = $('#time');
+ //  startTimer(secondsRemaining, display);
 };
 
 function checkAnswer(){
@@ -54,22 +55,23 @@ function checkAnswer(){
 };
 
 
-function startTimer(duration, display) {
-    var timer = duration, minutes, seconds;
-    setInterval(function () {
-        minutes = parseInt(timer / 60, 10);
-        seconds = parseInt(timer % 60, 10);
+// function startTimer(duration, display) {
+//   var timer = duration, minutes, seconds;
+//   setInterval(function () {
+//     minutes = parseInt(timer / 60, 10);
+//     seconds = parseInt(timer % 60, 10);
 
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
+//     minutes = minutes < 10 ? "0" + minutes : minutes;
+//     seconds = seconds < 10 ? "0" + seconds : seconds;
 
-        display.text(minutes + ":" + seconds);
+//     display.text(minutes + ":" + seconds);
 
-        if (--timer == -2) {  //This is to correct for the timer-text loading two seconds after starting - What is the issue?
-            checkAnswer();
-        }
-    }, 1000);
-}
+//   if (--timer == -2) {  //This is to correct for the timer-text loading two seconds after starting - What is the issue?
+//     clearInterval(timer);
+//     checkAnswer();
+//   	}
+//   }, 1000);
+// }
 
 
 
