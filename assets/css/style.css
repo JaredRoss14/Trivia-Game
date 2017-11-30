@@ -1,0 +1,41 @@
+* {
+	box-sizing: border-box;
+}
+
+/*General*/
+
+body {
+	font-family: 'Bigelow Rules', cursive;
+	font-size: 24px;
+	line-height: 34px;
+	color: black;
+	background: url("../images/riddler-logo-bg.jpg");
+}
+
+#triviaGame {
+	background: url("../images/bat-logo-bg.jpg");
+	margin-top: 30px;
+	border: 2px solid gray;
+}
+
+.transbox {
+  margin: 30px;
+  background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
+  background: rgba(204, 204, 204, 0.95);
+  border: 1px solid black;
+ }
+
+h1 {
+	font-size: 60px;
+	text-align: center;
+	font-weight: bold;
+}
+
+h2 {
+	text-align: center;
+	font-weight: bold;
+}
+
+.btn {
+	margin: 30px;
+}
